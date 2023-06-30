@@ -3,6 +3,7 @@ import "../MenuSlide/MenuSlide.scss";
 import accomodationIMG from "../../assets/images/accomodation.png";
 import nextIMG from "../../assets/images/next.png";
 import preIMG from "../../assets/images/previous.png";
+import filterIMG from "../../assets/images/filter.png";
 
 export default function MenuSlide() {
   const menuName = [
@@ -57,10 +58,16 @@ export default function MenuSlide() {
     );
   });
   return (
-    <div className="slideContainer">
-      <img src={preIMG} width="20" height="20" alt="previous" />
-      <div className="slideListContainer">{MenuSlideList}</div>
-      <img src={nextIMG} width="20" height="20" alt="next" />
+    <div className="container">
+      <div className="slideContainer">
+        <img src={preIMG} width="20" height="20" alt="previous" />
+        <div className="slideListContainer">{MenuSlideList}</div>
+        <img src={nextIMG} width="20" height="20" alt="next" />
+      </div>
+      <div className="filterButton">
+        <img src={filterIMG} width="15" height="15" alt="filter" />
+        필터
+      </div>
     </div>
   );
 }
