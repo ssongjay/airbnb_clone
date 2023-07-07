@@ -5,6 +5,9 @@ import com.example.airbnbclone.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class UserService {
     private final UserRepository userRepository;
@@ -22,7 +25,10 @@ public class UserService {
         return userRepository.findById(id).orElse(null);
     }
 
-
+    public List<User> findByEmail(String email) {
+        List<User> result = userRepository.findByEmail(email);
+        return result;
+    }
 
 
 }

@@ -15,6 +15,9 @@ public class User {
     private String password;
     private Date userRegistrationDate;
 
+    public User() {
+
+    }
     public User(String name, String email, String password, Date userRegistrationDate) {
         this.name = name;
         this.email = email;
@@ -24,11 +27,9 @@ public class User {
     public int getId() {
         return id;
     }
-
     public String getName() {
         return name;
     }
-
     @Override
     public String toString() {
         return "User{" +
